@@ -1,0 +1,36 @@
+.trail {
+  margin: 0;
+  padding: 0 0 0 14px;
+  list-style: none;
+  border-left: 2px solid var(--border);
+}
+
+.event {
+  position: relative;
+  padding: 0 0 14px 8px;
+}
+
+.event::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+}
+
+.event:last-child {
+  padding-bottom: 0;
+}
+
+.note {
+  color: var(--text-muted);
+}
+
+.when {
+  font-size: 12px;
+  color: var(--text-muted);
+}

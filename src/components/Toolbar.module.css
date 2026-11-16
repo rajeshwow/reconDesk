@@ -1,0 +1,29 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+  flex: 1 1 480px;
+  min-width: 0;
+}
+
+.filters > * {
+  flex: 0 1 180px;
+}
+
+.filters > :first-child {
+  flex: 1 1 260px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}

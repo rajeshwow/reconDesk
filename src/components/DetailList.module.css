@@ -1,0 +1,22 @@
+.list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(110px, 40%) 1fr;
+  gap: 12px;
+}
+
+.label {
+  color: var(--text-muted);
+}
+
+.value {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}

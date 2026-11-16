@@ -1,0 +1,187 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-muted: #f0f2f5;
+  --border: #dde2e8;
+  --text: #17202b;
+  --text-muted: #5b6575;
+
+  --accent: #1f56d6;
+  --accent-strong: #1745b0;
+  --accent-soft: #e8effd;
+  --on-accent: #ffffff;
+
+  --in: #13794b;
+  --out: #b3261e;
+
+  --success: #13794b;
+  --success-soft: #e2f3ea;
+  --warning: #8a5300;
+  --warning-soft: #fcefd6;
+  --danger: #b3261e;
+  --danger-soft: #fbe7e5;
+  --info: #1f56d6;
+  --info-soft: #e8effd;
+  --neutral: #4b5563;
+  --neutral-soft: #eceff3;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgb(16 24 40 / 0.05), 0 1px 3px rgb(16 24 40 / 0.07);
+  --shadow-lg: 0 12px 32px rgb(16 24 40 / 0.18);
+  --sidebar-width: 248px;
+  --topbar-height: 56px;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  color-scheme: light;
+}
+
+/* Dark palette. Applied when the user picks Dark, or when they leave it on System and
+   the OS is in dark mode. */
+:root[data-theme='dark'] {
+  --bg: #0f141b;
+  --surface: #171d26;
+  --surface-muted: #1e2530;
+  --border: #2b3441;
+  --text: #e6eaf0;
+  --text-muted: #9aa5b5;
+
+  --accent: #79a3ff;
+  --accent-strong: #9bbaff;
+  --accent-soft: #1b2a47;
+  --on-accent: #0b1220;
+
+  --in: #4cc38a;
+  --out: #ff8a80;
+
+  --success: #4cc38a;
+  --success-soft: #14301f;
+  --warning: #f0b452;
+  --warning-soft: #3a2c12;
+  --danger: #ff8a80;
+  --danger-soft: #3d1a18;
+  --info: #79a3ff;
+  --info-soft: #1b2a47;
+  --neutral: #aab4c3;
+  --neutral-soft: #262e3a;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0f141b;
+    --surface: #171d26;
+    --surface-muted: #1e2530;
+    --border: #2b3441;
+    --text: #e6eaf0;
+    --text-muted: #9aa5b5;
+
+    --accent: #79a3ff;
+    --accent-strong: #9bbaff;
+    --accent-soft: #1b2a47;
+    --on-accent: #0b1220;
+
+    --in: #4cc38a;
+    --out: #ff8a80;
+
+    --success: #4cc38a;
+    --success-soft: #14301f;
+    --warning: #f0b452;
+    --warning-soft: #3a2c12;
+    --danger: #ff8a80;
+    --danger-soft: #3d1a18;
+    --info: #79a3ff;
+    --info-soft: #1b2a47;
+    --neutral: #aab4c3;
+    --neutral-soft: #262e3a;
+
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.45;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  z-index: 100;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+a {
+  color: var(--accent);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+}

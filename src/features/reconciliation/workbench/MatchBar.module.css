@@ -1,0 +1,52 @@
+.bar {
+  position: sticky;
+  bottom: 12px;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 0;
+}
+
+.figures dt {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.figures dd {
+  margin: 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.balanced {
+  color: var(--success);
+}
+
+.off {
+  color: var(--danger);
+}
+
+.message {
+  flex: 1;
+  min-width: 180px;
+  color: var(--text-muted);
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}

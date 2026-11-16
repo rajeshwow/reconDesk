@@ -1,0 +1,60 @@
+.region {
+  position: fixed;
+  top: 68px;
+  right: 16px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(380px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 10px 16px;
+  border-radius: var(--radius-sm);
+  background: #1b2330;
+  color: #f3f5f8;
+  box-shadow: var(--shadow-lg);
+  pointer-events: auto;
+  animation: pop 0.18s ease-out;
+}
+
+.error {
+  background: #8f1d17;
+}
+
+.message {
+  flex: 1;
+}
+
+.action,
+.close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  min-height: 30px;
+  padding: 0 8px;
+}
+
+.action {
+  font-weight: 700;
+  color: #a9c4ff;
+}
+
+.action:hover,
+.close:hover {
+  background: rgb(255 255 255 / 0.1);
+}
+
+@keyframes pop {
+  from {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+}

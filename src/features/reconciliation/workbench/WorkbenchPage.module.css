@@ -1,0 +1,28 @@
+.page {
+  display: grid;
+  gap: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.overview {
+  display: grid;
+  gap: 16px;
+}
+
+.panes {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 1200px) {
+  .overview {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .panes {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: start;
+  }
+}
